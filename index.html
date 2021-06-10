@@ -9,6 +9,9 @@
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script>
       document.write(
@@ -21,13 +24,20 @@
   </head>
   <body>
     <header>
-      <h1>
-        <img src="assets/riachuelo.svg" alt="" />
-      </h1>
+      <div class="logo-btn">
+        <div class="responsive-sandwich">
+          <input type="checkbox" id="btn_menu">
+          <label for="btn_menu" class="label-menu">&#9776;</label>
+        </div>
+        <h1>
+          <img src="assets/riachuelo.svg" alt="" />
+        </h1>
+      </div>
       <div class="find-input">
         <img src="/assets/lupa-arredondada.png" alt="Lupa de busca">
         <input type="search" placeholder="O que você está procurando?"/>
       </div>
+      
       <nav>
         <ul class="list-links">
           <li><a href="">Novidades</a></li>

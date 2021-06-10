@@ -53,24 +53,52 @@ body header .find-input input:focus {
   border: none;
   outline: none;
 }
+body header input[type=checkbox] {
+  display: none;
+}
+body header .label-menu {
+  padding: 5px;
+  color: #222;
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
 body header .list-links {
   display: flex;
   margin-top: 1rem;
 }
-body header .list-links li {
+body header li {
   padding: 0 0.6rem;
   text-transform: uppercase;
 }
-body header .list-links li a {
+body header li a {
   color: #000000;
   text-decoration: none;
   font-weight: 600;
 }
-body header .list-links li a:hover {
+body header li a:hover {
   text-decoration: underline;
 }
-body header .list-links li:last-child {
+body header li:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 762px) {
+  body header .logo-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  body header .list-links {
+    display: none;
+  }
+  body header .label-menu {
+    display: inline;
+  }
 }
 body main .breadcrumbs {
   display: flex;
@@ -141,6 +169,18 @@ body main .products ol li p {
 }
 body main .products ol li p:nth-child(3) {
   font-weight: bold;
+}
+@media screen and (max-width: 762px) {
+  body main .breadcrumbs {
+    display: none;
+  }
+  body main .filters {
+    display: none;
+  }
+  body main .products ol {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 body footer .contact-container {
   width: 100%;
@@ -315,6 +355,31 @@ body footer .copyright-logo .copyright p {
   font-weight: 400;
   font-size: 0.7rem;
   text-align: start;
+}
+@media screen and (max-width: 762px) {
+  body footer .contact-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  body footer .faq-questions {
+    grid-template-columns: 80%;
+    align-items: center;
+  }
+  body footer .faq-questions .links {
+    flex-direction: column;
+    justify-content: center;
+  }
+  body footer .faq-questions .links ul {
+    height: auto;
+  }
+  body footer .payment-social {
+    width: 70%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

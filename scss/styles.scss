@@ -1,4 +1,5 @@
 body {
+  
   max-width: 100%;
   font-family: 'Poppins', sans-serif;
   color: red;
@@ -13,6 +14,8 @@ body {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #ebebeb;
+    
+
     h1 {
       text-align: center;
       margin-bottom: 20px;
@@ -29,7 +32,6 @@ body {
       border: 0.5px solid #333333;
 
       }
-
       img {
         width: 20px;
         height: 20px;
@@ -47,20 +49,35 @@ body {
         letter-spacing: 0.2rem;
         border: none;
         color:#a7a7a7;
-        
       }
-      
-
       input:focus {
         box-shadow: none;
         border: none;
         outline: none;
       }
     }
+    
+    input[type="checkbox"]{
+      display:none;
+    }
+
+    .label-menu {
+      padding: 5px;
+      color: #222;
+      text-align: center;
+      font-size: 2rem;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      display:none;
+    }
+    
 
     .list-links {
       display: flex;
       margin-top: 1rem;
+      
+      }
 
       li {
         padding: 0 .6rem;
@@ -77,6 +94,21 @@ body {
       }
       li:last-child {
         margin-right: 0;
+      }
+
+     @media screen and (max-width: 762px){
+      .logo-btn {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+      }
+      .list-links {
+         display: none;
+      }
+      .label-menu {
+        display:inline;
       }
     }
   }
@@ -160,8 +192,24 @@ body {
         }
       }
     }
-  }
 
+    @media screen and (max-width: 762px){
+      .breadcrumbs {
+        display: none;
+      }
+      .filters {
+        display: none;
+      }
+
+      .products{
+        
+        ol {
+          grid-template-rows: 1fr;
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
   footer {
     .contact-container {
       width:100%;
@@ -363,6 +411,44 @@ body {
         }
       }
     }
-  }
   
+    @media screen and (max-width: 762px){
+      
+      .contact-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .faq-questions {
+        grid-template-columns: 80%;
+        align-items: center;
+        .links {
+          flex-direction: column;
+          justify-content:center;
+          ul {
+            height:auto
+          }
+        }
+      }
+      
+      .payment-social {
+        width: 70%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+      }
+    }    
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
